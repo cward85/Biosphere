@@ -1,0 +1,67 @@
+﻿<Window x:Class="Biosphere.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="900" Width="1600" WindowStartupLocation="CenterScreen" Closing="Cleanup">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Sun:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="34"/>
+        <Label x:Name="lblSunAmount" Content="Label" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="Oxygen:" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="57"/>
+        <Label x:Name="lblOxygenAmount" Content="Label" HorizontalAlignment="Left" Margin="72,102,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="Carbon:" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="54"/>
+        <Label x:Name="lblCarbonAmount" Content="Label" HorizontalAlignment="Left" Margin="69,169,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="Hydrogen:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="70"/>
+        <Label x:Name="lblHydrogenAmount" Content="Label" HorizontalAlignment="Left" Margin="85,235,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblOxygenCostAmount" Content="Label" HorizontalAlignment="Left" Margin="72,133,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblCarbonCostAmount" Content="Label" HorizontalAlignment="Left" Margin="69,200,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblHydrogenCostAmount" Content="Label" HorizontalAlignment="Left" Margin="85,266,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblO2Amount" Content="Label" HorizontalAlignment="Left" Margin="69,302,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="CO2:" HorizontalAlignment="Left" Margin="6,373,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="37"/>
+        <Label x:Name="lblCO2Amount" Content="Label" HorizontalAlignment="Left" Margin="66,373,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="H2O:" HorizontalAlignment="Left" Margin="10,442,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="38"/>
+        <Label x:Name="lblH2OAmount" Content="Label" HorizontalAlignment="Left" Margin="65,442,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblO2CostAmount" Content="Label" HorizontalAlignment="Left" Margin="69,333,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.368,0.385" Height="26" Width="38"/>
+        <Label x:Name="lblCO2CostAmount" Content="Label" HorizontalAlignment="Left" Margin="66,404,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblH2OCostAmount" Content="Label" HorizontalAlignment="Left" Margin="65,473,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="O2:" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="29"/>
+        <Label Content="O3:" HorizontalAlignment="Left" Margin="9,511,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="29"/>
+        <Label x:Name="lblO3Amount" Content="Label" HorizontalAlignment="Left" Margin="60,511,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblO3CostAmount" Content="Label" HorizontalAlignment="Left" Margin="60,542,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="Income:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="55"/>
+        <Label x:Name="lblIncomeAmount" Content="Label" HorizontalAlignment="Left" Margin="67,41,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuyOxygen" Content="Buy" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyCarbon" Content="Buy" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyHydrogen" Content="Buy" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyO2" Content="Buy" HorizontalAlignment="Left" Margin="10,337,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyCO2" Content="Buy" HorizontalAlignment="Left" Margin="10,408,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyH2O" Content="Buy" HorizontalAlignment="Left" Margin="10,477,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Button x:Name="btnBuyO3" Content="Buy" HorizontalAlignment="Left" Margin="10,546,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Label Content="Wealth:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="54"/>
+        <Label x:Name="lblWealth" Content="Label" HorizontalAlignment="Left" Margin="67,72,0,0" VerticalAlignment="Top" Height="26" Width="130"/>
+        <Label Content="Algae:" HorizontalAlignment="Left" Margin="9,578,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="46"/>
+        <Label x:Name="lblAlgaeAmount" Content="Label" HorizontalAlignment="Left" Margin="60,578,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblAlgaeCostAmount" Content="Label" HorizontalAlignment="Left" Margin="60,609,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuyAlgae" Content="Buy" HorizontalAlignment="Left" Margin="10,613,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Label Content="Small Sea Creature:" HorizontalAlignment="Left" Margin="9,645,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="127"/>
+        <Label x:Name="lblSmallSeaAmount" Content="Label" HorizontalAlignment="Left" Margin="141,645,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblSmallSeaCostAmount" Content="Label" HorizontalAlignment="Left" Margin="141,676,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuySmallSea" Content="Buy" HorizontalAlignment="Left" Margin="10,680,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Label Content="Oxygen Factory:" HorizontalAlignment="Left" Margin="168,102,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="105"/>
+        <Label x:Name="lblOxygenFactoryAmount" Content="Label" HorizontalAlignment="Left" Margin="273,102,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblOxygenFactoryCostAmount" Content="Label" HorizontalAlignment="Left" Margin="273,133,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuyOxygenFactory" Content="Buy" HorizontalAlignment="Left" Margin="168,137,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Label Content="Carbon Factory:" HorizontalAlignment="Left" Margin="168,169,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="105"/>
+        <Label x:Name="lblCarbonFactoryAmount" Content="Label" HorizontalAlignment="Left" Margin="273,169,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblCarbonFactoryCostAmount" Content="Label" HorizontalAlignment="Left" Margin="273,200,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuyCarbonFactory" Content="Buy" HorizontalAlignment="Left" Margin="168,204,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+        <Label Content="Hydrogen Factory:" HorizontalAlignment="Left" Margin="168,235,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="105"/>
+        <Label x:Name="lblHydrogenFactoryAmount" Content="Label" HorizontalAlignment="Left" Margin="273,235,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblHydrogenFactoryCostAmount" Content="Label" HorizontalAlignment="Left" Margin="273,266,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnBuyHydrogenFactory" Content="Buy" HorizontalAlignment="Left" Margin="168,270,0,0" VerticalAlignment="Top" Width="45" Height="22" Click="BuyWorldObject"/>
+
+
+    </Grid>
+</Window>
